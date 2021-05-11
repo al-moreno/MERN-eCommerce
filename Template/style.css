@@ -24,7 +24,7 @@ body{
 /* Header */
 header{
     grid-area: header;
-    background-color: #2A52BD;
+    background-color: #1D2E79;
 }
 .row{
     display: flex;
@@ -60,11 +60,13 @@ main{
 h1 {
     font-size: 1.8rem;
     padding: 1rem 0;
+    
 }
 
 h2 {
     font-size: 1.6rem;
     padding: 1rem 0;
+    color:#1D2E79;
 }
 
 img {
