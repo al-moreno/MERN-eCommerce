@@ -57,6 +57,48 @@ main{
     padding:1rem;
 }
 
+h1 {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+img {
+    border-radius: .5rem;
+}
+img.medium {
+    width: 100%;
+    max-width: 29rem;
+}
+.card{
+    border: 0.1rem grey solid;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    background-color: rgb(235, 231, 231);
+}
+
+.card-body{
+    padding: 1rem;
+}
+
+.card-body > * {
+    margin-bottom: .5rem;
+
+}
+
+.rating span{
+    color: #EEC153;
+    
+}
+
+.price {
+    font-size: 2rem;
+}
+
 /* Footer */
 footer{
     grid-area: footer;
