@@ -3,7 +3,8 @@ import Rating from './Rating';
 
 export default function Item(props) {
 
-    const {item} = props;
+    const { item } = props;
+
     return (
         <div key={item._id} className="card">
             <a href={`/item/${item._id}`}>
@@ -13,7 +14,7 @@ export default function Item(props) {
                 <a href={`/item/${item._id}`}>
                     <h2>{item.name}</h2>
                 </a>
-                <Rating rating={item.rating} numReviews={item.numReviews} />
+                <Rating rating={item.rating} reviews={item.reviews} />
                 <div className="price">${item.price}
                 </div>
             </div>

@@ -1,40 +1,36 @@
 import React from 'react';
-import data from './data';
-import Item from './components/Item'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Item from './pages/Item';
 
 
 function App() {
 
   return (
-    <div className="grid-container">
-      <header className="row">
-        <div>
-          <a className="brand" href="/">eCommerce</a>
-        </div>
-        <div>
-          <a href="/cart">Cart</a>
-          <a href="/signin">Sign In</a>
-        </div>
-      </header>
 
-      <main>
-        <div className="row center">
-          {
-            data.items.map((item) => (
+    <Router>
 
+      <div className="grid-container">
+        <header className="row">
+          <div>
+            <a className="brand" href="/">eCommerce</a>
+          </div>
+          <div>
+            <a href="/cart">Cart</a>
+            <a href="/signin">Sign In</a>
+          </div>
+        </header>
 
-              <Item key={item.id} item={ item } />
+        <main>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/item/:id" component={Item} />
+        </main>
 
-            ))
-          }
-        
-        </div>
-      </main>
+        <footer className="row center">All Rights Reserved
+        </footer>
+      </div>
+    </Router>
 
-      <footer className="row center">All Rights Reserved
-
-    </footer>
-    </div>
   );
 }
 

@@ -8,19 +8,21 @@ const data = {
             image: "/images/Men-Pant-Black.jpg",
             price: 50.00,
             rating: 4,
-            numReviews: 6,
+            reviews: 6,
             description: "Great comfort casual pants",
+            stock: 34
 
         },
         {
-            id: "1",
+            id: "2",
             name: "Brown Casual Pants",
             category: "Men's Pants",
             image: "/images/Men-Pant-Brown.jpg",
             price: 67.00,
             rating: 5,
-            numReviews: 12,
+            reviews: 12,
             description: "High quality, great comfort pants",
+            stock: 23
 
         },
         {
@@ -30,8 +32,9 @@ const data = {
             image: "/images/Men-Pant-Grey.jpg",
             price: 24.00,
             rating: 2,
-            numReviews: 3,
+            reviews: 3,
             description: "Casual pants",
+            stock: 12
 
         },
         {
@@ -41,8 +44,9 @@ const data = {
             image: "/images/Men-Pant-Black.jpg",
             price: 75.00,
             rating: 4,
-            numReviews: 10,
+            reviews: 10,
             description: "High quality, great comfort casual pants",
+            stock: 9
 
         },
         {
@@ -52,8 +56,9 @@ const data = {
             image: "/images/Men-Pant-Brown.jpg",
             price: 50.00,
             rating: 4,
-            numReviews: 6,
+            reviews: 6,
             description: "High quality, great comfort casual pants",
+            stock: 0
 
         },
         {
@@ -63,8 +68,9 @@ const data = {
             image: "/images/Men-Pant-Grey.jpg",
             price: 50.00,
             rating: 4,
-            numReviews: 6,
+            reviews: 6,
             description: "High quality, great comfort casual pants",
+            stock: 9
 
         },
     ],
