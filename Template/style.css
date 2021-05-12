@@ -77,8 +77,8 @@ img.medium {
     max-width: 29rem;
 }
 .card{
-    border: 0.1rem grey solid;
-    border-radius: 0.5rem;
+    border: .1rem grey solid;
+    border-radius: .5rem;
     margin: 1rem;
     background-color: rgb(235, 231, 231);
 }
@@ -98,7 +98,7 @@ img.medium {
 }
 
 .price {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 /* Footer */
