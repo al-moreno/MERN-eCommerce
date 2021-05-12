@@ -5,7 +5,8 @@
   --white: #ffffff;
   --yellow: #EEC153; 
   --dark-grey: rgb(182, 179, 179);
-  --light-grey: rgb(235, 231, 231)
+  --light-grey: rgb(235, 231, 231);
+  --black: black;
 
 }
 
@@ -110,6 +111,9 @@ img.medium {
 .rating span{
   color: var(--yellow);
   
+}
+.rating span:last-child{
+  color: var(--black);
 }
 
 .price {
