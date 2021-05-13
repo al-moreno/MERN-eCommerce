@@ -170,6 +170,13 @@ button:hover{
   color: var(--red);
 }
 
+.alert-info{
+  color:var(--blue);
+}
+
+.alert-danger {
+  color: var(--red);
+}
 
 /* Footer */
 footer{

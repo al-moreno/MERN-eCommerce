@@ -4,7 +4,7 @@ import data from '../data';
 import Rating from '../components/Rating';
 
 
-export default function Item(props) {
+function Item(props) {
 
     const item = data.items.find((item) =>
         item.id === props.match.params.id);
@@ -60,3 +60,5 @@ export default function Item(props) {
         </div>
     );
 }
+
+export default Item;
