@@ -1,17 +1,43 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import data from '../data';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
 import Rating from '../components/Rating';
+
 
 
 function Item(props) {
 
-    const item = data.items.find((item) =>
-        item.id === props.match.params.id);
+ const {id} = useParams()
+    const [item, setItem] = useState({
+
+    });
+    // const [loading, setLoading] = useState(false);
+    // const [error, setError] = useState(false);
+
+    useEffect(() => {
+
+        const loadData = async () => {
+            try {
+                //            setLoading(true);
+                const { data } = await axios.get('/api/items/' + id);
+                //             setLoading(false);
+                setItem(data);
+            }
+            catch (err) {
+                //             setError(err.message);
+                //             setLoading(false);
+            }
+        };
+        loadData();
+    }, []);
+
+
+
     if (!item) {
         return <div> No Product Found </div>;
     }
     return (
+        <main>
         <div>
             <Link to='/'>Return to Results</Link>
             <div className="top row">
@@ -58,6 +84,7 @@ function Item(props) {
                 </div>
             </div>
         </div>
+        </main>
     );
 }
 

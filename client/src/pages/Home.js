@@ -30,15 +30,17 @@ export default function Home() {
     }, []);
 
     return (
+        <main>
         <div>
             {loading ? <Loading></Loading> : error 
                     ? <ErrorMessage variant="danger">{error}</ErrorMessage> :
                 <div className="center row">
                     {items.map((item) => {
-                        return <Item key={item.id} item={item} />
+                        return <Item key={item._id} item={item} />
                     })}
                 </div>
                 }
         </div>
+        </main>
     );
 }

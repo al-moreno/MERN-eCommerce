@@ -49,7 +49,7 @@ header{
   align-items: center;
 }
 .top.row{
-  align-items: flex-start;
+  align-self: flex-start;
 }
 .col-2{
   flex: 2 1  50rem;
