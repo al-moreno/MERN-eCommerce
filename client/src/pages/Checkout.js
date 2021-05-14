@@ -4,33 +4,10 @@ function Checkout() {
     return (
         <main>
         <div className="col-1">
+            
             <form className="card-body card">
 
-                <div>
-                    <h3> Login </h3>
-                </div>
-                <div class="row ">
-                    <label for="text" type="input" class="form-label">Username</label>
-                    <input type="username" class="form-control" id="name-signup" />
-                </div>
-
-                <div class="row ">
-                    <label for="exampleInputEmail1" class=" form-label">Email address</label>
-                    <input type="email" class="form-control" id="email-signup" aria-describedby="emailHelp" />
-                </div>
-
-
-                <div class="row ">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password-signup" />
-
-                </div>
-
-                <div class="row ">
-                    <label>Welcome Back</label >
-                    <input type="submit" value="Login" className="   " />
-
-                </div>
+           
 
 
 

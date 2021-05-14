@@ -1,0 +1,75 @@
+
+
+         
+
+                    <div>{item > 0 ?
+                        (<span> Cart is empty. <Link to="/">Go Shopping</Link></span>) :
+
+                        (
+                            <div>
+                                <ul>
+
+                                    <li key={item.product}>
+                                        <div className="row">
+                                            <div>
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.name}
+                                                    className="small"
+                                                ></img>
+                                            </div>
+                                            <div className="min-30">
+                                                <Link to={`/product/${item.product}`}>{item.name}</Link>
+                                            </div>
+                                            <div>
+                                                <select
+                                                    value={item.qty}
+
+                                                >
+                                                    {[...Array(item.countInStock).keys()].map((x) => (
+                                                        <option key={x + 1} value={x + 1}>
+                                                            {x + 1}
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                            </div>
+                                            <div>${item.price}</div>
+                                            <div>
+                                                <button
+                                                    type="button"
+
+                                                >
+                                                    Delete
+                    </button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+
+                                <div className="col-1">
+                                    <div className="card card-body">
+                                        <ul>
+                                            <li>
+                                                <h2>
+
+                                                </h2>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    type="button"
+
+                                                    className="primary block"
+
+                                                >
+                                                    Proceed to Checkout
+              </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+             
+            )
+   

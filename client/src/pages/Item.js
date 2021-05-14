@@ -13,21 +13,18 @@ function Item(props) {
     const [item, setItem] = useState({
 
     });
-    // const [loading, setLoading] = useState(false);
-    // const [error, setError] = useState(false);
-
+  
     useEffect(() => {
 
         const loadData = async () => {
             try {
-                //            setLoading(true);
+             
                 const { data } = await axios.get('/api/items/' + id);
-                //             setLoading(false);
+               
                 setItem(data);
             }
             catch (err) {
-                //             setError(err.message);
-                //             setLoading(false);
+                
             }
         };
         loadData();

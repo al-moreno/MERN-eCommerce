@@ -1,4 +1,5 @@
 const express = require("express");
+/*eslint-disable*/
 
 const mongoose = require("mongoose");
 const routes = require("./routes");
