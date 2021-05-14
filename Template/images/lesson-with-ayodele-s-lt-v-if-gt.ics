@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+PRODID:-//AddEvent Inc//AddEvent.com v1.7//EN
+VERSION:2.0
+BEGIN:VEVENT
+DTSTAMP:20210514T022905Z
+ORGANIZER;CN=Wyzant:MAILTO:organizer@addevent.com
+STATUS:CONFIRMED
+UID:1620959345addeventcom
+SEQUENCE:0
+DTSTART:20210515T120000
+DTEND:20210515T140000
+SUMMARY:Lesson with Ayodele S.
+DESCRIPTION:To get the most out of your online lesson\, test your setup before you meet: https://www.wyzant.com/online/systemscheck\n\nTo change these plans\, please contact Ayodele S. directly through Wyzant: https://wyzant.com/student/messaging/conversation/tutor/88223715\n\n
+X-ALT-DESC;FMTTYPE=text/html:<p>To get the most out of your online lesson, test your setup before you meet: https://www.wyzant.com/online/systemscheck</p>&lt;!--v-if--&gt;<br /> <p>To change these plans, please contact Ayodele S. directly through Wyzant: https://wyzant.com/student/messaging/conversation/tutor/88223715</p>&lt;!--v-if--&gt;<br /> &lt;!--v-if--&gt;
+LOCATION:Online lesson room: https://wyzant.com/online/enterroomwithuser?uid=88223715
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

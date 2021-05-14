@@ -1,3 +1,5 @@
+//
+
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -29,7 +31,7 @@ function Item(props) {
             }
         };
         loadData();
-    }, []);
+    }, []);///////////////////////////////////////////////////////reack hook useEffec missing id dependency 
 
 
 
