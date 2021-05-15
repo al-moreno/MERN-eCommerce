@@ -112,6 +112,10 @@ img {
   max-width: 25rem;
 }
 
+img.small {
+  max-width: 100px;
+}
+
 img.medium {
   width: 100%;
   max-width: 29rem;
@@ -195,4 +199,34 @@ footer{
 .logout {
   color: #fff;
   cursor: pointer;
+}
+
+.single-row {
+  font-size: large;
+}
+
+.name-cell {
+  padding-left: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  width: 400px;
+  text-overflow: ellipsis;
+}
+
+.item-name {
+  font-size: x-large;
+}
+
+.item-desc {
+  font-size: medium;
+  color: orange;
+}
+
+.item-price {
+  width: 200px;
+}
+
+.item-quantity {
+  padding-left: 40px;
+  width: 150px;
 }

@@ -6,15 +6,26 @@ import SignUp from './pages/Signup';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Login from "./pages/Login";
+import cartService from "./service/cart";
 
 function App() {
 	const [verified, setVerified] = useState(false);
 	const [userName, setUserName] = useState(false);
+	const [cartSize, setCartSize] = useState(0);
 
 	const logout = () => {
 		//clear the user info and reload page
 		localStorage.removeItem("user");
+		localStorage.removeItem("cart");
 		window.location.reload();
+	}
+
+	const updateCartTotal = () => {
+		const subscription = cartService.cartCount().subscribe((cartSize) => {
+			setCartSize(cartSize);
+		});
+
+		return () => { subscription.unsubscribe(); };
 	}
 
 	useEffect(() => {
@@ -26,6 +37,9 @@ function App() {
 			setUserName(user.user.firstName);
 		}
 
+		updateCartTotal();
+
+		cartService.checkCart();
 	},[]);
 
 	return (
@@ -40,7 +54,7 @@ function App() {
 					<div>
 						{verified ? <span className="welcome">Welcome {userName}!</span> : <Link to="/signup"> Sign Up</Link>}
 						{!verified ? <Link to="/login">Login</Link> : '' }
-						<Link to="/cart"> Cart </Link>
+						<Link to="/cart"> Cart ({cartSize}) </Link>
 						{verified ? <span onClick={() => logout()} className="logout">Logout</span> : '' }
 					</div>
 				</header>

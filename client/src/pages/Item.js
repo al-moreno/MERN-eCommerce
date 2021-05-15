@@ -4,31 +4,32 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Rating from '../components/Rating';
-
-
+import cartService from '../service/cart';
 
 function Item(props) {
 
  const {id} = useParams()
-    const [item, setItem] = useState({
+    const [item, setItem] = useState({});
 
-    });
-  
+    const addToCart = (item) => {
+        cartService.addToCart(item);
+    }
+
     useEffect(() => {
 
         const loadData = async () => {
             try {
-             
+
                 const { data } = await axios.get('/api/items/' + id);
-               
+
                 setItem(data);
             }
             catch (err) {
-                
+
             }
         };
         loadData();
-    }, []);///////////////////////////////////////////////////////reack hook useEffec missing id dependency 
+    }, []);///////////////////////////////////////////////////////reack hook useEffec missing id dependency
 
 
 
@@ -76,7 +77,7 @@ function Item(props) {
                                 </div>
                             </li>
                             <li>
-                                <button className="block">Add to Cart</button>
+                                <button onClick={() => addToCart(item)} className="block">Add to Cart</button>
                             </li>
                         </ul>
                     </div>
