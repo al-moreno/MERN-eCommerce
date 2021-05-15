@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
-
-function Signup() {
+function Signup(props) {
 
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
@@ -11,25 +9,33 @@ function Signup() {
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
 
-  
+    function handleFormSubmission(event) {
+         event.preventDefault();
 
-    async function handleFormSubmission(event)  {
-        event.preventDefault();
-     const response = await axios.post("/api/users/signup", {
-            firstName, 
-            lastName,
-            email,
-            userName,
-            password
-        });
-        console.log(response);
+         axios.post("/api/users/signup", {
+              firstName,
+              lastName,
+              email,
+              userName,
+              password
+         }).then((response) => {
+              console.log(response);
+              //get the data
+              const userData = response && response.data ? response.data : '';
+              //save the token and the user
+              localStorage.setItem("user", JSON.stringify(userData));
+              props.history.push("/");
+              window.location.reload();
+         }).catch((err) => {
+              alert(err.response.data);
+         })
     }
 
 
     // const signupFormHandler = async (event) => {
     //     event.preventDefault();
 
-        
+
     //     if (name && email && password) {
     //         const response = await fetch('/api/users', {
     //             method: 'POST',
@@ -50,8 +56,6 @@ function Signup() {
         <main>
             <div className="col-1">
                 <form onSubmit={(e) => handleFormSubmission(e)}  className="card-body card">
-
-                    
                     <h3> Sign Up </h3>
                     <div className="row">
                     </div>
@@ -73,7 +77,7 @@ function Signup() {
                     </div>
                     <div className="row">
                         <label> Password </label>
-                        <input type="password" onChange={(e) => setPassword(e.target.value)}name="password" className="   " />
+                        <input type="password" onChange={(e) => setPassword(e.target.value)} name="password" className="   " />
                     </div>
                     <div className="row">
                         <label><input type="checkbox" name="terms" /> I agree with the <a href="#"> Terms and Conditions </a></label >
@@ -86,5 +90,3 @@ function Signup() {
 }
 
 export default Signup;
-
-

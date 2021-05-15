@@ -1,79 +1,50 @@
-import React from 'react';
+import React, {useState} from 'react';
+import axios from "axios";
 
+function Login(props) {
 
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
-function Login() {
-
-    const signupFormHandler = async (event) => {
+    const signupFormHandler = (event) => {
         event.preventDefault();
 
-        
-        if (name && email && password) {
-            const response = await fetch('/api/users', {
-                method: 'POST',
-                body: JSON.stringify({ username: name, email: email, password: password }),
-                headers: { 'Content-Type': 'application/json' },
-            });
-
-            if (response.ok) {
-                document.location.replace('/');
-            } else {
-                alert(response.statusText);
-            }
+        if (email && password) {
+            axios.post('/api/users/login', {
+                     email,
+                     password
+                 })
+                 .then((response) => {
+                     const userData = response && response.data ? response.data : '';
+                     //save the token and the user
+                     localStorage.setItem("user", JSON.stringify(userData));
+                     props.history.push("/");
+                     window.location.reload();
+                 }).catch((err) => {
+                alert(err.response.data);
+            })
         }
     };
-
-
-
-
 
     return (
         <main>
             <div className="col-1">
-                <form className="card-body card">
-
+                <form onSubmit={(e) => signupFormHandler(e)} className="card-body card">
                     <div>
                         <h3> Login </h3>
                     </div>
                     <div className="row ">
-                        <label for="text" type="input" className="form-label">Username</label>
-                        <input type="username" className="form-control" id="name-signup" />
+                        <label for="text" type="input" className="form-label">Email</label>
+                        <input type="email" onChange={(e) => setEmail(e.target.value)} className="form-control" id="email-login" />
                     </div>
 
                     <div class="row ">
                         <label for="exampleInputPassword1" className="form-label">Password</label>
-                        <input type="password" className="form-control" id="password-signup" />
+                        <input type="password" onChange={(e) => setPassword(e.target.value)} className="form-control" id="password-login" />
                     </div>
                     <div class="row ">
                         <label>Welcome Back</label >
                         <input type="submit" value="Login" className="   " />
-                    </div>
-                    <h3> Sign Up </h3>
-                    <div className="row">
-                    </div>
-                    <div className="row">
-                        <label> First Name </label>
-                        <input type="text" name="firstname" className="   " />
-                    </div>
-                    <div className="row">
-                        <label> Last Name </label>
-                        <input type="text" name="lastname" className="   " />
-                    </div>
-                    <div className="row">
-                        <label> Email Address </label>
-                        <input type="email" name="email" className="   " />
-                    </div>
-                    <div className="row">
-                        <label> Username </label>
-                        <input type="text" name="username" className="   " />
-                    </div>
-                    <div className="row">
-                        <label> Password </label>
-                        <input type="password" name="password" className="   " />
-                    </div>
-                    <div className="row">
-                        <label><input type="checkbox" name="terms" /> I agree with the <a href="#"> Terms and Conditions </a></label >
-                        <input type="submit" value="Sign up" className="   " />
                     </div>
                 </form>
             </div>
@@ -82,5 +53,3 @@ function Login() {
 }
 
 export default Login;
-
-
