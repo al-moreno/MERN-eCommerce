@@ -11,7 +11,7 @@ mongoose.connect(
 const itemSeed = [
 
     {
-
+        id: "1",
         name: "Black Casual Pants",
         category: "Men's Pants",
         image: "/images/Men-Pant-Black.jpg",
@@ -23,7 +23,7 @@ const itemSeed = [
 
     },
     {
-
+        id: "2",
         name: "Brown Casual Pants",
         category: "Men's Pants",
         image: "/images/Men-Pant-Brown.jpg",
@@ -35,7 +35,7 @@ const itemSeed = [
 
     },
     {
-
+        id: "3",
         name: "Grey Casual Pants",
         category: "Men's Pants",
         image: "/images/Men-Pant-Grey.jpg",
@@ -47,10 +47,10 @@ const itemSeed = [
 
     },
     {
-
-        name: "Black Casual Pants",
-        category: "Men's Pants",
-        image: "/images/Men-Pant-Black.jpg",
+        id: "4",
+        name: "Casual beige sweatshirt",
+        category: "Men's Tops",
+        image: "/images/Men-Top-Beige.jpg",
         price: 75.00,
         rating: 4,
         reviews: 10,
@@ -59,10 +59,10 @@ const itemSeed = [
 
     },
     {
-
-        name: "Black Casual Pants",
-        category: "Men's Pants",
-        image: "/images/Men-Pant-Brown.jpg",
+        id: "5",
+        name: "Casual beige sweatshirt",
+        category: "Men's Tops",
+        image: "/images/Men-Top-Black.jpg",
         price: 50.00,
         rating: 4,
         reviews: 6,
@@ -71,10 +71,10 @@ const itemSeed = [
 
     },
     {
-
-        name: "Black Casual Pants",
-        category: "Men's Pants",
-        image: "/images/Men-Pant-Grey.jpg",
+        id: "6",
+        name: "Casual natural sweatshirt",
+        category: "Men's Tops",
+        image: "/images/Men-Top-White.jpg",
         price: 50.00,
         rating: 4,
         reviews: 6,
