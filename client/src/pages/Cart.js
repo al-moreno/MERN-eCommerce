@@ -22,7 +22,13 @@ function Cart() {
                         </tr>
                     </table>
                 </div>
+             
             }) : 'No Items in the cart'}
+                    <ul>
+                        <li>
+                            <button  className="block">Proceed to Checkout</button>
+                        </li>
+                    </ul>
         </main>
     )
 }
