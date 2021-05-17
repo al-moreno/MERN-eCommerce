@@ -1,44 +1,30 @@
-![picture](coming_soon.jpeg)
-
-
-
-
 # E-Commerce
-
 
 
 ## Table Of Contents:
 - [Description](#Description)
 - [Deployment](#Deployment)
 - [Installation](#Installation)
-- [Contributors](#Contributors) 
 - [License](#License)
 
-<!-- 
+
 ## Description
 
-This employee directory application has been created with React. Employees and managers would greatly benefit from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+An application that will allow any retail store, regardless of size, the ability to provide an online experience for consumers regardless of the current situation or possible future pandemic, you too can stay in the game. Having seen so many small retail stores close when quarantine began, my focus was driven to attempt to provide a flexible, low cost, self-manageable e-Commerce Product.
 
 ## Deployment: 
 
-GitHub Repo: https://github.com/al-moreno/Employee_Directory
+GitHub Repo: https://github.com/al-moreno/MERN-eCommerce 
 
-Heroku: https://al-moreno.github.io/Employee_Directory/
+Heroku: pending
 
-![picture](App.png)
+![picture](image1.png)
 
 
 ## Installation:
 1.  After cloning repo to your device locate the folder
-2.  In terminal run "npm i" which will install all the required dependencies including: bootstrap, react, react-bootstrap, react-dom
+2.  In terminal run "npm i" which will install all the required dependencies 
 3.  In terminal command line run "npm start"
-
-
-## Contributors
-
-A special thanks to the most patient tutor in the world Phil Cowan.
-
-I would also like to recognize freeCodeCamp.org for amazing tutorials. 
 
 
 ## License
