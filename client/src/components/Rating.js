@@ -3,10 +3,9 @@ import React from 'react';
 
 export default function Rating(props) {
 
-    const {rating, reviews} = props;
+    const { rating, reviews } = props;
 
     return (
-
         <div className="rating">
             <span>
                 <i className={rating >= 1 ? 'fa fa-star' : rating >= .5 ? 'fa fa-star-half-o' : 'fa fa-star-o'} />

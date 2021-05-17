@@ -17,7 +17,6 @@ const saveCartToMemory = (cart) => {
 
 const addToCart = (item) => {
 	const cart = getCartFromMemory();
-	//check for duplicates
 	const existingItem = cart.find(x => x._id === item._id);
 	if (existingItem){
 		existingItem.quantity++;
@@ -27,7 +26,6 @@ const addToCart = (item) => {
 	}
 
 	alert(`Added ${item.name} to the cart.`)
-	//add item to cart and save cart
 	saveCartToMemory(cart);
 
 	cartTotal.next(getCartCount());
@@ -35,7 +33,6 @@ const addToCart = (item) => {
 
 const removeFromCart = (item) => {
 	const cart = getCartFromMemory();
-	//find item in cart, remove and save cart
 	saveCartToMemory(cart);
 }
 

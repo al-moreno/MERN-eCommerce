@@ -10,25 +10,23 @@ function Signup(props) {
     const [password, setPassword] = useState("")
 
     function handleFormSubmission(event) {
-         event.preventDefault();
+        event.preventDefault();
 
-         axios.post("/api/users/signup", {
-              firstName,
-              lastName,
-              email,
-              userName,
-              password
-         }).then((response) => {
-              console.log(response);
-              //get the data
-              const userData = response && response.data ? response.data : '';
-              //save the token and the user
-              localStorage.setItem("user", JSON.stringify(userData));
-              props.history.push("/");
-              window.location.reload();
-         }).catch((err) => {
-              alert(err.response.data);
-         })
+        axios.post("/api/users/signup", {
+            firstName,
+            lastName,
+            email,
+            userName,
+            password
+        }).then((response) => {
+            console.log(response);
+            const userData = response && response.data ? response.data : '';
+            localStorage.setItem("user", JSON.stringify(userData));
+            props.history.push("/");
+            window.location.reload();
+        }).catch((err) => {
+            alert(err.response.data);
+        })
     }
 
 
@@ -55,7 +53,7 @@ function Signup(props) {
     return (
         <main>
             <div className="col-1">
-                <form onSubmit={(e) => handleFormSubmission(e)}  className="card-body card">
+                <form onSubmit={(e) => handleFormSubmission(e)} className="card-body card">
                     <h3> Sign Up </h3>
                     <div className="row">
                     </div>
@@ -65,22 +63,22 @@ function Signup(props) {
                     </div>
                     <div className="row">
                         <label> Last Name </label>
-                        <input type="text" onChange={(e) => setLastName(e.target.value)}name="lastname" className="   " />
+                        <input type="text" onChange={(e) => setLastName(e.target.value)} name="lastname" className="   " />
                     </div>
                     <div className="row">
                         <label> Email Address </label>
-                        <input type="email" onChange={(e) => setEmail(e.target.value)}name="email" className="   " />
+                        <input type="email" onChange={(e) => setEmail(e.target.value)} name="email" className="   " />
                     </div>
                     <div className="row">
                         <label> Username </label>
-                        <input type="text" name="username" onChange={(e) => setUserName(e.target.value)}className="   " />
+                        <input type="text" name="username" onChange={(e) => setUserName(e.target.value)} className="   " />
                     </div>
                     <div className="row">
                         <label> Password </label>
                         <input type="password" onChange={(e) => setPassword(e.target.value)} name="password" className="   " />
                     </div>
                     <div className="row">
-                        <label><input type="checkbox" name="terms" /> I agree with the <a href="#"> Terms and Conditions </a></label >
+                        <label><input type="checkbox" name="terms" /> I agree with the <a href="#"> Terms and Conditions </a></label>
                         <input type="submit" value="Sign up" className="   " />
                     </div>
                 </form>

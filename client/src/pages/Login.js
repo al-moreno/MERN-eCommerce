@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from "axios";
 
 function Login(props) {
@@ -11,18 +11,18 @@ function Login(props) {
 
         if (email && password) {
             axios.post('/api/users/login', {
-                     email,
-                     password
-                 })
-                 .then((response) => {
-                     const userData = response && response.data ? response.data : '';
-                     //save the token and the user
-                     localStorage.setItem("user", JSON.stringify(userData));
-                     props.history.push("/");
-                     window.location.reload();
-                 }).catch((err) => {
-                alert(err.response.data);
+                email,
+                password
             })
+                .then((response) => {
+                    const userData = response && response.data ? response.data : '';
+                    //save the token and the user
+                    localStorage.setItem("user", JSON.stringify(userData));
+                    props.history.push("/");
+                    window.location.reload();
+                }).catch((err) => {
+                    alert(err.response.data);
+                })
         }
     };
 

@@ -1,5 +1,3 @@
-//
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // import data from '../data';
@@ -15,7 +13,7 @@ export default function Home() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        
+
         const loadData = async () => {
             try {
                 setLoading(true);
@@ -33,16 +31,16 @@ export default function Home() {
 
     return (
         <main>
-        <div>
-            {loading ? <Loading></Loading> : error 
+            <div>
+                {loading ? <Loading></Loading> : error
                     ? <ErrorMessage variant="danger">{error}</ErrorMessage> :
-                <div className="center row">
-                    {items.map((item) => {
-                        return <Item key={item._id} item={item} />
-                    })}
-                </div>
+                    <div className="center row">
+                        {items.map((item) => {
+                            return <Item key={item._id} item={item} />
+                        })}
+                    </div>
                 }
-        </div>
+            </div>
         </main>
     );
 }
