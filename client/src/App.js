@@ -6,7 +6,7 @@ import SignUp from './pages/Signup';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Login from "./pages/Login";
-import cartService from "./service/cart";
+import cartService from "./components/cart";
 
 function App() {
 	const [verified, setVerified] = useState(false);

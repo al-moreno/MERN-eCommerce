@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Rating from '../components/Rating';
-import cartService from '../service/cart';
+import cartService from '../components/cart';
 
 function Item(props) {
 
