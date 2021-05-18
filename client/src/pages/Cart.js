@@ -26,7 +26,7 @@ function Cart() {
             }) : 'No Items in the cart'}
                     <ul>
                         <li>
-                            <button  className="block">Proceed to Checkout</button>
+                            <button className="block">Proceed to Checkout</button>
                         </li>
                     </ul>
         </main>

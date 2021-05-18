@@ -4,6 +4,8 @@ import axios from 'axios';
 import Item from '../components/Item';
 import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
+import './Home.css';
+
 
 
 export default function Home() {
@@ -30,17 +32,20 @@ export default function Home() {
     }, []);
 
     return (
-        <main>
+        
             <div>
                 {loading ? <Loading></Loading> : error
                     ? <ErrorMessage variant="danger">{error}</ErrorMessage> :
-                    <div className="center row">
+                        <div className="col-2">
+                            <div className="center row">
+                    
                         {items.map((item) => {
                             return <Item key={item._id} item={item} />
                         })}
                     </div>
+                    </div>
                 }
             </div>
-        </main>
+      
     );
 }

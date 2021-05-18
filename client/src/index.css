@@ -28,18 +28,18 @@ body{
 
 .grid-container{
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10rem 1fr 4rem;  
   grid-template-areas:
-  'header'
-  'main'
-  'footer';
-  grid-template-columns: 1fr;
-  grid-template-rows: 8rem 1fr 4rem;
+  'header header header header header header'
+  '. . main main . .'
+  'footer footer footer footer footer footer';
   height: 100%
 }
 
 /* Header */
 header{
-  grid-area: header;
+  grid-area: header ;
   background-color: var(--blue);
 }
 .row{

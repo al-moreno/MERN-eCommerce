@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./Signup.css";
 
 function Signup(props) {
 
@@ -52,6 +53,7 @@ function Signup(props) {
 
     return (
         <main>
+           <h1> </h1>
             <div className="col-1">
                 <form onSubmit={(e) => handleFormSubmission(e)} className="card-body card">
                     <h3> Sign Up </h3>
