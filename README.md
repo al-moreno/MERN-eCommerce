@@ -16,7 +16,7 @@ An application that will allow any retail store, regardless of size, the ability
 
 GitHub Repo: https://github.com/al-moreno/MERN-eCommerce 
 
-Heroku: pending
+Heroku: https://project3ecom.herokuapp.com/
 
 ![picture](image1.png)
 
