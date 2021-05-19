@@ -7,48 +7,50 @@ function Checkout() {
             <div className="col-1">
                 <form className="card-body card">
                     <h3> Checkout</h3>
+                    <br />
                     <div class="row">
                     </div>
                     <div className="row">
-                        <label> Country: </label>
-                        <input type="text" name="country" className="   " />
+                        <label>Email: </label>
+                        <input type="email" name="email" className="   " />
                     </div>
+                    <br />
+                    
                     <div className="row">
-                        <label> First Name: </label>
+                        <label > Credit Information: </label>
                         <input type="text" name="firstname" className="   " />
+                        
                     </div>
+                    <br />
                     <div className="row">
-                        <label> Last Name: </label>
+                        <label> EXP / CVC </label>
+                        <input type="text" name="lastname" className="   " />
                         <input type="text" name="lastname" className="   " />
                     </div>
+
+                    <div>
+                        <label><input type="checkbox" name="terms" /> Keep on file</label>
+                    </div>
+                    <br />
                     <div className="row">
-                        <label> Mailing Address: </label>
+                        <label> Name on Card: </label>
                         <input type="text" name="mailingaddress" className="   " />
                     </div>
-                    <div className="row">
-                        <label> City: </label>
-                        <input type="text" name="city" className="   " />
-                    </div>
+                    <br />
                     <div className="row">
                         <label> State: </label>
                         <input type="text" name="state" className="   " />
                     </div>
+                    <br />
                     <div className="row">
                         <label> Zip / Postal Code: </label>
                         <input type="text" name="zip" className="   " />
                     </div> 
-                    <div className="row">
-                        <label> Phone Number: </label>
-                        <input type="text" name="phone" className="   " />
-                    </div>
-                    <div className="row">
-                        <label> Email Address: </label>
-                        <input type="email" name="email" className="   " />
-                    </div>
+                    
     
                     <div className="row">
     
-                        <input type="submit" value="Secure Payment" className="payment" />
+                        <input type="submit" value="Submit Payment" className="payment" />
                     </div>
                 </form>
             </div>
