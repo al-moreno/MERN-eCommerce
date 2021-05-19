@@ -14,7 +14,8 @@
   
   html{
     font-size: 62%;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+  
   }
   body{
     margin:0;
@@ -23,6 +24,7 @@
     font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+   
   }
   
   
@@ -32,6 +34,8 @@
   header{
     grid-area: header ;
     background-color: var(--blue);
+    
+    
   }
   .row{
     display: flex;
@@ -60,7 +64,9 @@
   a.brand {
     font-size: 3rem;
     font-weight: bold;
-    color: --white;
+    color: var(--light-grey);
+    text-shadow: 2px 2px 2px var(--red);
+    font-family: Georgia, sans-serif;
   }
   
   a.hover {
@@ -83,6 +89,7 @@
   main{
     grid-area: main;
     padding:1rem;
+   
   }
   
   h1 {
@@ -117,6 +124,7 @@
   }
   
   .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: .1rem var(--dark-grey) solid;
     border-radius: .5rem;
     margin: 1rem;
