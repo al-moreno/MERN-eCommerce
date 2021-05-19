@@ -26,7 +26,8 @@ function Cart() {
             }) : 'No Items in the cart'}
                     <ul>
                         <li>
-                            <button  href="Checkout.js" className="block">Proceed to Checkout</button>
+                            <button className="block">
+                            <a href="checkout">Proceed to Checkout</a></button>
                         </li>
                     </ul>
         </main>
