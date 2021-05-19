@@ -60,11 +60,13 @@
     text-decoration: none;
   }
   a.brand {
+    font-style: italic;
+    letter-spacing: 4px;
     font-size: 3rem;
     font-weight: bold;
     color: var(--light-grey);
     text-shadow: 2px 2px 2px var(--red);
-    font-family: Georgia, sans-serif;
+    font-family: cursive; 
   }
   
   a.hover {
