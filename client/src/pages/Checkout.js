@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import image from '../components/cards.png';
 
 
 function Checkout() {
@@ -6,9 +7,12 @@ function Checkout() {
         <main>
             <div className="col-1">
                 <form className="card-body card">
-                    <h3> Checkout</h3>
+                    <div className="row">
+                    <h3> Checkout   </h3>
+                    <img src={image} alt="cards" />
+                    </div>
                     <br />
-                    <div class="row">
+                    <div className="row">
                     </div>
                     <div className="row">
                         <label>Email: </label>

@@ -7,6 +7,7 @@ import Cart from '../pages/Cart';
 import Checkout from '../pages/Checkout';
 import Login from "../pages/Login";
 import cartService from "./cart";
+import logo from '../components/download.png'
 
 const styles ={
 
@@ -75,7 +76,7 @@ export default function Routes() {
             <div style={location.pathname === "/" ?  styles.Home  : styles.SignUp}className="grid-container">
 <header className="row">
     <div>
-        <Link to="/" className="brand"> eCommerce </Link>
+        <Link to="/" className="brand"> <img src={logo} alt="logo" />  </Link>
     </div>
     <div>
         {verified ? <span className="welcome">Welcome {userName}!</span> : <Link to="/signup"> Sign Up</Link>}
